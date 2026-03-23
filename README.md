@@ -7,6 +7,12 @@ ssh -CNg -L 6006:127.0.0.1:6006 root@connect.nmb1.seetacloud.com -p 49276
 
 su - simuser
 
+生成 Github ssh key
+
+ssh-keygen -t ed25519 -C "yanzhang@whu.edu.cn"
+
+cat /root/.ssh/id_ed25519.pub
+
 安装系统依赖
 编译 UE4.27
 编译 AirSim
