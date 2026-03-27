@@ -13,6 +13,8 @@ ssh-keygen -t ed25519 -C "yanzhang@whu.edu.cn"
 
 cat /root/.ssh/id_ed25519.pub
 
+conda activate /root/autodl-tmp/conda_envs/dino_wm
+
 安装系统依赖
 编译 UE4.27
 编译 AirSim
