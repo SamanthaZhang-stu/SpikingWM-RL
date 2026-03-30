@@ -15,6 +15,10 @@ cat /root/.ssh/id_ed25519.pub
 
 conda activate /root/autodl-tmp/conda_envs/dino_wm
 
+export WANDB_MODE=offline
+
+export DATASET_DIR=/root/autodl-tmp/swm_data/datasets
+
 安装系统依赖
 编译 UE4.27
 编译 AirSim
