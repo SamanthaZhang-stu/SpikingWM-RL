@@ -19,6 +19,8 @@ export WANDB_MODE=offline
 
 export DATASET_DIR=/root/autodl-tmp/swm_data/datasets
 
+python train.py --config-name train.yaml env=deformable_env frameskip=5 num_hist=3
+
 安装系统依赖
 编译 UE4.27
 编译 AirSim
