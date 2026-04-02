@@ -21,6 +21,7 @@ export DATASET_DIR=/root/autodl-tmp/swm_data/datasets
 
 python train.py --config-name train.yaml ckpt_base_path=/root/autodl-tmp env=deformable_env frameskip=2 num_hist=3
 
+ssh -N -o ExitOnForwardFailure=yes -R 7897:127.0.0.1:7897 root@connect.nmb1.seetacloud.com -p 12609
 安装系统依赖
 编译 UE4.27
 编译 AirSim
