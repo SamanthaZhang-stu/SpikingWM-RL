@@ -23,6 +23,10 @@ export DATASET_DIR=/root/autodl-tmp/swm_data/datasets
 
 export DATASET_DIR=/mnt/e/wm_data/datasets
 
+export PYFLEXROOT=/home/world_model/dino_wm/PyFleX
+
+export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:/root/.mujoco/mujoco210/bin:/usr/lib/nvidia:$LD_LIBRARY_PATH
+
 python train.py --config-name train.yaml ckpt_base_path=/root/autodl-tmp env=deformable_env frameskip=2 num_hist=3
 
 # 将本地端口代理到远端
