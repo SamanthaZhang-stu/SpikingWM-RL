@@ -29,6 +29,14 @@ export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:/root/.mujoco/m
 
 python train.py --config-name train.yaml ckpt_base_path=/root/autodl-tmp env=deformable_env frameskip=2 num_hist=3
 
+/home/samantha_zhang/mambaforge/envs/dino_wm/bin/python /home/world_model/dino_wm/plan.py \
+  --config-name plan_granular.yaml \
+  ckpt_base_path=/mnt/e/wm_data/checkpoints \
+  model_name=deformable_env/granular \
+  n_evals=1 \
+  n_plot_samples=1
+
+
 # 将本地端口代理到远端
 
 ssh -N -o ExitOnForwardFailure=yes -R 7897:127.0.0.1:7897 root@connect.nmb1.seetacloud.com -p 12609
