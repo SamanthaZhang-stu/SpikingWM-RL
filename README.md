@@ -21,6 +21,8 @@ export WANDB_MODE=offline
 
 export DATASET_DIR=/root/autodl-tmp/swm_data/datasets
 
+export DATASET_DIR=/mnt/e/wm_data/datasets
+
 python train.py --config-name train.yaml ckpt_base_path=/root/autodl-tmp env=deformable_env frameskip=2 num_hist=3
 
 # 将本地端口代理到远端
