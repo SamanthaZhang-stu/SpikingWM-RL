@@ -23,7 +23,7 @@ export DATASET_DIR=/root/autodl-tmp/swm_data/datasets
 
 export DATASET_DIR=/mnt/e/wm_data/datasets
 
-export PYFLEXROOT=/home/world_model/dino_wm/PyFleX
+export PYFLEXROOT=/home/world_model/AdaptiGraph/PyFleX
 
 export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:/root/.mujoco/mujoco210/bin:/usr/lib/nvidia:$LD_LIBRARY_PATH
 
