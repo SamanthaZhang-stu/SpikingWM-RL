@@ -13,6 +13,12 @@ ssh-keygen -t ed25519 -C "yanzhang@whu.edu.cn"
 
 cat /root/.ssh/id_ed25519.pub
 
+# 启动远程桌面
+
+rm -rf /tmp/.X1*  # 如果再次启动，删除上一次的临时文件，否则无法正常启动
+
+USER=root /opt/TurboVNC/bin/vncserver :1 -desktop X -auth /root/.Xauthority -geometry 1920x1080 -depth 24 -rfbwait 120000 -rfbauth /root/.vnc/passwd -fp /usr/share/fonts/X11/misc/,/usr/share/fonts -rfbport 6006
+
 # 训练前准备
 
 conda activate /root/autodl-tmp/conda_envs/dino_wm
