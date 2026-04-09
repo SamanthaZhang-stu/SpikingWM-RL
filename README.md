@@ -51,7 +51,7 @@ export WANDB_MODE=offline
 python plan.py --config-name plan_granular.yaml \
   model_name=granular \
   ckpt_base_path=/world_model/checkpoints \
-  n_evals=5 \
+  n_evals=1 \
   planner.sub_planner.num_samples=64 \
   planner.sub_planner.topk=8 \
   planner.sub_planner.horizon=5 \
