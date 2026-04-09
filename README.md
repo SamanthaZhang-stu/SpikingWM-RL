@@ -51,12 +51,32 @@ export WANDB_MODE=offline
 python plan.py --config-name plan_granular.yaml \
   model_name=granular \
   ckpt_base_path=/world_model/checkpoints \
-  n_evals=1 \
-  planner.sub_planner.num_samples=16 \
-  planner.sub_planner.topk=4 \
-  planner.sub_planner.horizon=3 \
-  planner.sub_planner.opt_steps=2 \
-  n_plot_samples=1
+  n_evals=5 \
+  planner.sub_planner.num_samples=64 \
+  planner.sub_planner.topk=8 \
+  planner.sub_planner.horizon=5 \
+  planner.sub_planner.opt_steps=5 \
+  n_plot_samples=2
+
+
+查看是否切换到了nvidia
+
+__NV_PRIME_RENDER_OFFLOAD=1 \
+__GLX_VENDOR_LIBRARY_NAME=nvidia \
+SDL_VIDEODRIVER=x11 \
+glxinfo -B | egrep "OpenGL vendor|OpenGL renderer|OpenGL version"
+
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export SDL_VIDEODRIVER=x11
+export DATASET_DIR=/world_model/datasets
+export PYFLEXROOT=/home/zhangyan/dino_wm/PyFleX
+export PYTHONPATH=${PYFLEXROOT}/bindings/build:$PYTHONPATH
+export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
+
+图形界面查看GPU进程
+nvtop
+
 
 # 将本地端口代理到远端
 
