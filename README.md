@@ -42,6 +42,11 @@ python train.py --config-name train.yaml ckpt_base_path=/root/autodl-tmp env=def
   n_evals=1 \
   n_plot_samples=1
 
+原生ubuntu上
+
+export PYFLEXROOT=/workspace/PyFleX
+
+export WANDB_MODE=offline
 
 # 将本地端口代理到远端
 
