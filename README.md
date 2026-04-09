@@ -48,6 +48,16 @@ export PYFLEXROOT=/workspace/PyFleX
 
 export WANDB_MODE=offline
 
+python plan.py --config-name plan_granular.yaml \
+  model_name=granular \
+  ckpt_base_path=/world_model/checkpoints \
+  n_evals=1 \
+  planner.sub_planner.num_samples=16 \
+  planner.sub_planner.topk=4 \
+  planner.sub_planner.horizon=3 \
+  planner.sub_planner.opt_steps=2 \
+  n_plot_samples=1
+
 # 将本地端口代理到远端
 
 ssh -N -o ExitOnForwardFailure=yes -R 7897:127.0.0.1:7897 root@connect.nmb1.seetacloud.com -p 12609
