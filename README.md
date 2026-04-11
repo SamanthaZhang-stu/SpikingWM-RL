@@ -52,11 +52,11 @@ python plan.py --config-name plan_granular.yaml \
   model_name=granular \
   ckpt_base_path=/world_model/checkpoints \
   n_evals=1 \
-  planner.sub_planner.num_samples=64 \
-  planner.sub_planner.topk=8 \
+  planner.sub_planner.num_samples=96 \
+  planner.sub_planner.topk=12 \
   planner.sub_planner.horizon=5 \
-  planner.sub_planner.opt_steps=5 \
-  n_plot_samples=2
+  planner.sub_planner.opt_steps=8 \
+  n_plot_samples=1
 
 
 查看是否切换到了nvidia
