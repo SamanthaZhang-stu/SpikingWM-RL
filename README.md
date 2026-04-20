@@ -98,6 +98,7 @@ export NO_PROXY=localhost,127.0.0.1
 
 
 # LeWorldModel
+conda activate lewm
 cd /root/le-wm
 source .venv/bin/activate
 
