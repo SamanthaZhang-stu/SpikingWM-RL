@@ -80,7 +80,7 @@ nvtop
 
 # 将本地端口代理到远端
 
-ssh -N -o ExitOnForwardFailure=yes -R 7897:127.0.0.1:7897 root@connect.nmb1.seetacloud.com -p 12609
+ssh -N -o ExitOnForwardFailure=yes -R 7897:127.0.0.1:7897 root@connect.westd.seetacloud.com -p 24868
 
 unset HTTP_PROXY HTTPS_PROXY ALL_PROXY http_proxy https_proxy all_proxy
 
