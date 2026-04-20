@@ -97,3 +97,7 @@ export https_proxy=http://127.0.0.1:7897
 export NO_PROXY=localhost,127.0.0.1
 
 
+# LeWorldModel
+cd /root/le-wm
+source .venv/bin/activate
+
