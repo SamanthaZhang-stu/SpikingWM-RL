@@ -102,3 +102,8 @@ conda activate lewm
 cd /root/le-wm
 source .venv/bin/activate
 
+CUDA_LAUNCH_BLOCKING=1 python train.py \
+  +data=pusht \
+  subdir=pusht_lewm_run1 \
+  wandb.enabled=False \
+  'hydra.run.dir=/root/autodl-tmp/hydra_outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}'
