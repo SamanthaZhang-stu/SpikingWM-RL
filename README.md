@@ -107,3 +107,16 @@ CUDA_LAUNCH_BLOCKING=1 python train.py \
   subdir=pusht_lewm_run1 \
   wandb.enabled=False \
   'hydra.run.dir=/root/autodl-tmp/hydra_outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}'
+
+
+evaluation
+
+VENV=/root/le-wm/.venv
+NV_BASE=$VENV/lib/python3.10/site-packages/nvidia
+NV_LIBS="$NV_BASE/cudnn/lib:$NV_BASE/cusparselt/lib:$NV_BASE/cu13/lib:$NV_BASE/nccl/lib"
+
+LD_LIBRARY_PATH="$NV_LIBS" \
+STABLEWM_HOME=/root/autodl-tmp/stablewm \
+MUJOCO_GL=egl \
+python eval.py
+
