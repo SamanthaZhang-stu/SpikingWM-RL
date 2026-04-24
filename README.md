@@ -120,3 +120,13 @@ STABLEWM_HOME=/root/autodl-tmp/stablewm \
 MUJOCO_GL=egl \
 python eval.py
 
+
+
+# train
+
+source /root/snn-le-wm/.venv/bin/activate
+
+cd /root/snn-le-wm
+
+OMP_NUM_THREADS=1 python train.py
+
