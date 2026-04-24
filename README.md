@@ -124,9 +124,7 @@ python eval.py
 
 # train
 
-source /root/snn-le-wm/.venv/bin/activate
-
 cd /root/snn-le-wm
+OMP_NUM_THREADS=1 /root/snn-le-wm/.venv/bin/python train.py
 
-OMP_NUM_THREADS=1 python train.py
 
