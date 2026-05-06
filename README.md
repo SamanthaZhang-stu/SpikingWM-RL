@@ -128,3 +128,33 @@ cd /root/snn-le-wm
 OMP_NUM_THREADS=1 /root/snn-le-wm/.venv/bin/python train.py
 
 
+# 服务器上配置claude
+1. 上传.credentials.json到服务器 .claude
+2. 配置本地sshd
+   Host connect.westd.seetacloud.com
+  HostName connect.westd.seetacloud.com
+  Port 20736
+  User root
+  RemoteForward 17897 127.0.0.1:7897
+3.给服务器挂上梯子
+4.在vscode里找到Preferences: Open Remote Settings (JSON)
+替换成
+{
+  "http.proxy": "http://127.0.0.1:17897",
+  "http.proxySupport": "on",
+  "claudeCode.environmentVariables": [
+    {
+      "name": "HTTP_PROXY",
+      "value": "http://127.0.0.1:17897"
+    },
+    {
+      "name": "HTTPS_PROXY",
+      "value": "http://127.0.0.1:17897"
+    },
+    {
+      "name": "NO_PROXY",
+      "value": "localhost,127.0.0.1"
+    }
+  ]
+}
+
