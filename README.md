@@ -136,8 +136,8 @@ OMP_NUM_THREADS=1 /root/snn-le-wm/.venv/bin/python train.py
   Port 20736
   User root
   RemoteForward 17897 127.0.0.1:7897
-3.给服务器挂上梯子
-4.在vscode里找到Preferences: Open Remote Settings (JSON)
+3. 给服务器挂上梯子
+4. 在vscode里找到Preferences: Open Remote Settings (JSON)
 替换成
 {
   "http.proxy": "http://127.0.0.1:17897",
