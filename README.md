@@ -163,3 +163,6 @@ OMP_NUM_THREADS=1 /root/snn-le-wm/.venv/bin/python train.py
   ]
 }
 
+# 清除ssh残留
+ssh-keygen -R "[connect.nmb2.seetacloud.com]:28461"
+
